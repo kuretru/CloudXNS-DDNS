@@ -12,5 +12,7 @@
 `sh CloudXNS-ddns.sh`
 
 如果需要在DDNS成功后记录日志，可以参考以下代码。  
-`curl …… >> /opt/zhen/cloudxns-ddns.log  
-echo "${i_time} ${i_data}" >> /opt/zhen/cloudxns-ddns.log`
+```
+curl …… >> /path/cloudxns-ddns.log  
+echo "${i_time} ${i_data}" >> /path/cloudxns-ddns.log
+```
