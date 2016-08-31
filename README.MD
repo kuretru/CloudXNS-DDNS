@@ -1,5 +1,4 @@
 # CloudXNS DDNS on bash with curl
-***
 看到很多CloudXNS的DDNS客户端都是基于官方的Python SDK做的，于是根据官方的API文档撸了一个轮子。
 
 ### 特点
