@@ -18,8 +18,8 @@ secret_key=""
 domain=""
 
 #WAN Network Interface Card
-#e.g. interface=""     		 -> If it's empty, CloudXNS will automatic get your public IP
-#or   interface="ppp0" 		 -> on tomato
+#e.g. interface=""           -> If it's empty, CloudXNS will automatic get your public IP
+#or   interface="ppp0"       -> on tomato
 #or   interface="pppoe-wan1" -> on OpenWRT
 interface=""
 
