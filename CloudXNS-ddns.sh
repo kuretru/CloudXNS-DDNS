@@ -18,9 +18,9 @@ secret_key=""
 domain=""
 
 #WAN Network Interface Card
-#e.g. interface=""     -> If it's empty, CloudXNS will automatic get your public IP
-#or   interface="ppp0" -> on tomato
-#or   interface="wan1" -> on OpenWRT
+#e.g. interface=""     		 -> If it's empty, CloudXNS will automatic get your public IP
+#or   interface="ppp0" 		 -> on tomato
+#or   interface="pppoe-wan1" -> on OpenWRT
 interface=""
 
 if  [ -n "$interface" ] ;then
@@ -37,4 +37,4 @@ header3="API-HMAC:"$mac
 header4="API-FORMAT:json"
 
 result=$(curl -k -X POST -H $header1 -H "$header2" -H $header3 -H $header4 -d "$data" $url)
-echo "${result} ${time} ${data}" >> $(pwd)/cloudxns-ddns.log
+echo "${result} ${time} ${data}" >> $(cd `dirname $0`; pwd)/cloudxns-ddns.log
