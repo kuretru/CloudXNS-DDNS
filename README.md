@@ -11,10 +11,12 @@
 2. 在[CloudXNS](https://www.cloudxns.net/AccountManage/apimanage.html)获得API Key后，将API Key、Secret Key填入脚本。
 3. 在CloudXNS添加需要DDNS的域名，并在脚本填写该域名。  
 `domain="www.cloudxns.net."`
-4. 设置好具有公网IP的网卡
-        interface=""     #留空时，CloudXNS则会自动获取你的公网IP
-        interface="ppp0" #tomato路由器使用ppp0作为网卡名
-        interface="wan1" #OpenWRT路由器使用wan1作为网卡名
+4. 设置好具有公网IP的网卡  
+
+		interface=""     #留空时，CloudXNS则会自动获取你的公网IP  
+		interface="ppp0" #tomato路由器使用ppp0作为网卡名  
+		interface="wan1" #OpenWRT路由器使用wan1作为网卡名
+		
 5. 脚本会在执行过后自动在当前目录下生成名为*cloudxns-ddns.log*的日志文件，方便日后查看，如果不需要此功能，将最后一行注释即可。  
 `#echo "${result} ${time} ${data}" >> $(pwd)/cloudxns-ddns.log`
 5. 执行`sh CloudXNS-ddns.sh`。
