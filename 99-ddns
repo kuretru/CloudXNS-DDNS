@@ -1,0 +1,8 @@
+#!/bin/sh
+[ "$INTERFACE" = wan1 ] || exit 0
+
+if [ "$ACTION" = ifup ];then
+
+        sh /root/CloudXNS-ddns.sh
+
+fi
