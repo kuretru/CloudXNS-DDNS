@@ -37,4 +37,6 @@ header3="API-HMAC:"$mac
 header4="API-FORMAT:json"
 
 result=$(curl -k -X POST -H $header1 -H "$header2" -H $header3 -H $header4 -d "$data" $url)
-echo "${result} ${time} ${data}" >> $(cd `dirname $0`; pwd)/cloudxns-ddns.log
+if  [[ $(echo $result | grep "success") != "" ]] ;then
+    logger -t NOTICE "CloudXNS DDNS success IP address $value"
+fi
